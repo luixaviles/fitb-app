@@ -13,18 +13,18 @@ Let's describe the Project graph based on the provided app and libraries:
 
 * `client`: An Angular project that implements the Frontend application using the latest version: v18.
 * `form`: Implements the dynamic form component. This component needs to be created using the `config` content.
-* `widget`: Implements a component that has the ability to render a set of data(based on the provided configuration), and render nested elements if they are provided.
-* `data-access`: Implements a data access layer along with the services needed to get access to the configuration object and other parameters.
+* `widget`: Implements a component that can render a set of data(based on the provided configuration), and render nested elements if they are provided.
+* `data-access`: Implements a data access layer and the services needed to access the configuration object and other parameters.
 * `data`: Defines the source data(`config.ts`) for all the project. It may be used to add more configuration objects and use different data formats.
-* `types`: A library that provides all TypeScript types and provide strong typing for the project.
+* `types`: A library that provides all TypeScript types and provides strong typing for the project.
 * `ui-dropdown`: Defines a reusable dropdown component.
-* `ui-input`: Defines a reusable input component based on ng-bootstrap library.
+* `ui-input`: Defines a reusable input component based on the ng-bootstrap library.
 
-For better understanding of how these libraries are defined, let's take a look on the specified folders:
+For a better understanding of how these libraries are defined, let's take a look at the specified folders:
 
 <img src="./screenshots/graph-2.png?raw=true" width="400">
 
-The `fitb` folder contains the code associated to the main application and the `shared` folder defines the agnosting widget components.
+The `fitb` folder contains the code associated with the main application and the `shared` folder defines the agnostic widget components.
 
 ## Implemented Features
 * Implemented a dynamic form using Angular's Reactive forms.
@@ -34,7 +34,7 @@ The `fitb` folder contains the code associated to the main application and the `
 * The Form widget component allows rendering nested elements
 
 ## Live Application
-[https://jokes-app-425623.web.app/](https://luixaviles-fitb.web.app)
+[https://luixaviles-fitb.web.app](https://luixaviles-fitb.web.app)
 
 ## Running the Project
 

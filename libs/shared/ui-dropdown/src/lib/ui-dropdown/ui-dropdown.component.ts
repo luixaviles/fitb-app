@@ -60,7 +60,6 @@ export class UiDropdownComponent implements ControlValueAccessor, OnInit{
     this.formControl = <FormControl>this.formGroupParent.get(this.controlName);
     this.formControl.valueChanges
       .pipe(
-        tap(value => console.log('[dropdown.component]', value)),
         tap((value) => this.onChange(value)),
         takeUntilDestroyed(this.destroyRef)
       )

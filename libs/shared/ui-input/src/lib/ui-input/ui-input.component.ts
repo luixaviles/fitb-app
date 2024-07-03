@@ -69,7 +69,6 @@ export class UiInputComponent implements ControlValueAccessor, OnInit {
 
     this.formControl.valueChanges
       .pipe(
-        tap(value => console.log('[input.component]', value)),
         tap((value) => this.onChange(value)),
         takeUntilDestroyed(this.destroyRef)
       )

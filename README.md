@@ -33,6 +33,9 @@ The `fitb` folder contains the code associated to the main application and the `
 * Form fields and other elements can be shown/hidden based on the configuration.
 * The Form widget component allows rendering nested elements
 
+## Live Application
+[https://jokes-app-425623.web.app/](https://luixaviles-fitb.web.app)
+
 ## Running the Project
 
 To run the project you will need to install the dependencies and start the `client` application:
@@ -42,4 +45,4 @@ npm install
 npx nx serve client
 ```
 
-Then, open the browser at the given URL.
+Then, open the browser at `http://localhost:4200` or use the assigned port.

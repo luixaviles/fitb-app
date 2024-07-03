@@ -57,7 +57,6 @@ export class FormComponent implements OnInit {
         return data.map((nodeData) => this.parseWidgetData(nodeData, formData));
       }),
       tap(() => {
-        console.log('formArray', this.formArray);
         this.form = this.fb.group({
           array: this.formArray,
         });

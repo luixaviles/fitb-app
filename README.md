@@ -2,12 +2,12 @@
 
 A reusable form component using the FITB-Concept, implemented using Nx, Angular, TypeScript and Bootstrap 5.
 
-<img src="./screenshots/screen.gif?raw=true" width="400">
+<img src="./screenshots/screen.gif?raw=true" width="800">
 
 ## Project Architecture
 The project has been generated using the latest version of Nx. It defines a single Angular application along with the libraries related to the app and other shared libraries.
 
-<img src="./screenshots/graph-1.png?raw=true" width="400">
+<img src="./screenshots/graph-1.png?raw=true" width="600">
 
 Let's describe the Project graph based on the provided app and libraries:
 
@@ -22,7 +22,7 @@ Let's describe the Project graph based on the provided app and libraries:
 
 For a better understanding of how these libraries are defined, let's take a look at the specified folders:
 
-<img src="./screenshots/graph-2.png?raw=true" width="400">
+<img src="./screenshots/graph-2.png?raw=true" width="600">
 
 The `fitb` folder contains the code associated with the main application and the `shared` folder defines the agnostic widget components.
 

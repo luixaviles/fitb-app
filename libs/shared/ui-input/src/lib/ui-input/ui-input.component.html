@@ -1,0 +1,23 @@
+<ng-container [formGroup]="formGroupParent">
+    <div class="input-group input-group-sm">
+      <input
+        [type]="type"
+        class="form-control fitb-input"
+        [ngClass]="{
+          'is-invalid': formControl.touched && formControl.errors
+        }"
+        [placeholder]="placeholder"
+        [formControlName]="controlName"
+      />
+  
+      @if (formControl.touched && formControl.errors) {
+          @if(formControl.hasError('required')) { 
+              <span class="invalid-feedback">required</span>
+          } 
+          @if (formControl.hasError('minlength')) {
+              <span class="invalid-feedback">value too short</span>
+          }
+      }
+    </div>
+</ng-container>
+  

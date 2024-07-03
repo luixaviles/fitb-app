@@ -1,0 +1,27 @@
+<ng-container [formGroup]="formGroupParent">
+    <div ngbDropdown class="d-inline-block">
+      <button
+        type="button"
+        class="btn btn-outline-primary btn-sm"
+        [ngClass]="{
+          'btn-outline-danger': formControl.touched && formControl.errors
+        }"
+        ngbDropdownToggle
+        (focusout)="formControl.markAsTouched()"
+      >
+        {{ option === null ? placeholder : option.name }}
+      </button>
+      <div ngbDropdownMenu>
+        @for (option of options; track $index) {
+        <button ngbDropdownItem (click)="onOptionChange(option)">
+          {{ option.name }}
+        </button>
+        }
+      </div>
+    </div>
+    
+    @if (formControl.touched && formControl.errors && formControl.hasError('required')) {
+      <span class="invalid-feedback">required</span>
+    }
+</ng-container>
+  

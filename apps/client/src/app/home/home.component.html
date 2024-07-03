@@ -1,0 +1,6 @@
+<div class="d-flex flex-column m-4">
+    <form [formGroup]="form" class="d-flex flex-row gap-2">
+        <fitb-input type="text" [formGroupParent]="form" controlName="name"></fitb-input>
+        <fitb-dropdown [formGroupParent]="form" controlName="currency" [options]="currencyOptions"></fitb-dropdown>
+    </form>
+</div>

@@ -15,8 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@fitb-app/types": ["libs/fitb/types/src/index.ts"],
+      "@fitb/data": ["libs/fitb/data/src/index.ts"],
+      "@fitb/data-access": ["libs/fitb/data-access/src/index.ts"],
       "@fitb/ui-dropdown": ["libs/shared/ui-dropdown/src/index.ts"],
-      "@fitb/ui-input": ["libs/shared/ui-input/src/index.ts"]
+      "@fitb/ui-input": ["libs/shared/ui-input/src/index.ts"],
+      "@fitb/ui/form": ["libs/fitb/ui/form/src/index.ts"],
+      "@fitb/ui/widget": ["libs/fitb/ui/widget/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

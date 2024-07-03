@@ -1,0 +1,23 @@
+@for (item of nodes(); track $index) {
+    @if(item.type === 'text') {
+        @for (text of item.data?.split(' '); track $index) {
+            <span>{{text}}</span>
+        }
+    }
+    @if(item.widget === 'input' && item.formGroup !== undefined) {
+        <fitb-input type="text" [formGroupParent]="item.formGroup"
+            [placeholder]="item.placeholder?? ''"
+            controlName="data"></fitb-input>
+    }
+    @if(item.widget === 'select-with-options' && item.formGroup !== undefined && item.options !== undefined) {
+        <fitb-dropdown [formGroupParent]="item.formGroup" controlName="data" [options]="item.options"
+            [placeholder]="item.placeholder?? 'Select'"></fitb-dropdown>
+
+            @for (subItem of item.nodes; track $index) {
+                @if(subItem.filter?.$in?.includes(item.formGroup.value.data.value)){
+                    <fitb-widget [nodes]="$any(subItem.children)"></fitb-widget>
+                }
+            }
+    }
+}
+

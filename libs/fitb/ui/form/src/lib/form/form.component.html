@@ -1,0 +1,9 @@
+@if(data$ | async; as data) {
+    <div class="d-flex flex-row flex-wrap gap-2 p-4" style="border: 1px solid lightgray">
+        @if(form) {
+            <form [formGroup]="form" class="d-flex flex-row flex-wrap gap-1">
+                    <fitb-widget [nodes]="data"></fitb-widget>
+            </form>
+        }
+    </div>
+}

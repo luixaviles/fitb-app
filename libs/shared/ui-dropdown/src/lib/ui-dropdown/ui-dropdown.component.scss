@@ -1,3 +1,40 @@
 .invalid-feedback {
-    display: block;
+  display: block;
+}
+
+$background-color: rgba(216, 220, 235, 0.3);
+$text-4-labels: #687196;
+$input-text-color: rgb(62, 64, 219);
+$dropdown-text-no-selection: rgb(104, 113, 150);
+
+.fitb-dropdown {
+  background-color: $background-color;
+  color: $text-4-labels;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $text-4-labels;
+    background-color: $background-color;
+  }
+}
+
+.btn-outline-primary {
+  --bs-btn-border-color: $background-color;
+  &:active,
+  &:focus,
+  &:hover {
+    color: $input-text-color;
+    background-color: $background-color;
+  }
+}
+.btn-outline-danger {
+  --bs-btn-border-color: #dc3545;
+}
+
+.no-selection {
+  color: $dropdown-text-no-selection;
+}
+.populated {
+  color: $input-text-color;
 }

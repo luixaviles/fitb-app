@@ -2,9 +2,11 @@
     <div ngbDropdown class="d-inline-block">
       <button
         type="button"
-        class="btn btn-outline-primary btn-sm"
+        class="btn btn-outline-primary btn-sm fitb-dropdown"
         [ngClass]="{
-          'btn-outline-danger': formControl.touched && formControl.errors
+          'btn-outline-danger': formControl.touched && formControl.errors,
+          'no-selection': option === null,
+          'populated': option !== null
         }"
         ngbDropdownToggle
         (focusout)="formControl.markAsTouched()"

@@ -1,4 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+/* Defining custom colors. */
+$text-1: #030929;
+$text-4-labels: rgb(104, 113, 150);
+$input-text-color: rgb(62, 64, 219);
+$dropdown-text-no-selection: $text-4-labels;
+$input-text-background-color: rgba(62, 64, 219, 0.07);
+/* Defining custom sizes. */
+$fitb-input-width: 160px;
+$fitb-dropdown-width: 149px;
+
+/* Overriding Bootstrap variables. */
+$body-color: $text-1;
+$btn-border-color: rgba(216, 220, 235, 0.3);
+$input-placeholder-color: $text-4-labels;
 
 /* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
+
+html,
+body,
+h1,
+div {
+  font-family: "Circular-Std";
+}
+
+.invalid-feedback {
+  margin-top: 0;
+  font-size: 0.75em;
+}
+
+/*Customize inputs. */
+.fitb-input-container {
+  width: $fitb-input-width;
+}
+.input-group > input.fitb-input {
+  flex: 0 1 $fitb-input-width;
+  color: $input-text-color;
+  background-color: $input-text-background-color;
+}
+
+/*Customize dropdowns. */
+.dropdown-toggle.btn {
+  width: $fitb-dropdown-width;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  padding: 8px;
+
+  .dropdown-item {
+    --bs-dropdown-link-active-bg: rgba(170, 175, 255, 0.3);
+    cursor: pointer;
+    width: 287px;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 8px;
+    &:nth-child(odd) {
+      background-color: rgba(241, 243, 248, 0);
+    }
+    &:nth-child(even) {
+      background-color: rgba(241, 243, 248, 0.75);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: rgba(170, 175, 255, 0.3);
+    }
+  }
+}
